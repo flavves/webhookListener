@@ -1,0 +1,9 @@
+import requests
+
+url = 'http://127.0.0.1:3000'  # Webhook URL'si
+data = {'key': 'value'}  # Göndermek istediğiniz veri
+
+response = requests.post(url, json=data)
+
+print('İstek durumu:', response.status_code)
+print('Sunucu yanıtı:', response.text)
